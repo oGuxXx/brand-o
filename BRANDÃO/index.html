@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Convite</title>
+    <style>
+      body {
+        background-color: salmon;
+      }
+
+      #question {
+        text-align: center;
+        margin-top: 200px;
+        font-size: 24px;
+      }
+
+      #buttons {
+        text-align: center;
+        margin-top: 80px;
+      }
+
+      #no-button {
+        margin-right: 80px;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div id="question">
+        <p>Topa sair comigo?</p>
+      </div>
+      <div id="buttons">
+        <button id="yes-button">Sim</button>
+        <button id="no-button">Não</button>
+      </div>
+    </section>
+    <script>
+      const noButton = document.getElementById("no-button");
+      const buttonsContainer = document.getElementById("buttons");
+
+      noButton.addEventListener("click", () => {
+        const randomX = Math.floor(Math.random() * window.innerWidth);
+        const randomY = Math.floor(Math.random() * window.innerHeight);
+
+        noButton.style.position = "absolute";
+        noButton.style.top = randomY + "px";
+        noButton.style.left = randomX + "px";
+      });
+    </script>
+  </body>
+</html>
